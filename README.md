@@ -3,11 +3,14 @@
 A clickable prototype of a rebuilt Fishbrain onboarding flow and paywall, plus a
 second-chance offer paywall on close. Built as a prospect-facing artefact.
 
-## How to view it
+## View it
 
-There is no hosted link. GitHub renders `index.html` as source, not as a page, and
-GitHub Pages needs a public repo on a free plan — so while this repo is private the
-only way to open it is locally:
+**→ https://bterzic123.github.io/fishbrain-flow-rebuild/**
+
+Live, public, no login. Served by GitHub Pages from `main`, so it stays up as long
+as this repo does and updates on every push.
+
+To run it locally instead:
 
 ```bash
 git clone https://github.com/bterzic123/fishbrain-flow-rebuild.git
@@ -16,18 +19,6 @@ open fishbrain-flow-rebuild/index.html
 
 No build step, no dependencies, no network calls — one self-contained file, so it
 works offline and straight off disk.
-
-**To put it behind a URL** (e.g. to send a prospect something that outlives a
-screen-share), make the repo public and turn on Pages:
-
-```bash
-gh repo edit bterzic123/fishbrain-flow-rebuild --visibility public --accept-visibility-change-consequences
-gh api -X POST repos/bterzic123/fishbrain-flow-rebuild/pages -f 'source[branch]=main' -f 'source[path]=/'
-```
-
-That publishes to `https://bterzic123.github.io/fishbrain-flow-rebuild/` — and makes
-the teardown, the pricing analysis and the prospect's name world-readable. Deliberate
-call, not a convenience.
 
 ## What's in it
 
